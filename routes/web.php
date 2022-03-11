@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//BOOKS ROUTES
+
+Route::get('/elenco-libri','BooksController@index')->name('elenco-libri');
+Route::get('{id}/dettagli-libro','BooksController@show')->name('dettagli-libro');
+
